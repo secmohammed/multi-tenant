@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TenantConnection extends Model {
-	protected $fillable = [
-		'database',
-	];
+class TenantConnection extends Model
+{
+    protected $fillable = [
+        'database'
+    ];
 }

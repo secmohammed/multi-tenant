@@ -4,6 +4,10 @@ use App\Tenant\Manager;
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/test', function () {
-	dd(app(Manager::class)->getTenant());
-});
+Route::resource('projects', 'Tenant\ProjectController');
+
+Route::resource('projects/{project}/files', 'Tenant\ProjectFileController', [
+    'names' => [
+        'store' => 'projects.files.store'
+    ]
+]);

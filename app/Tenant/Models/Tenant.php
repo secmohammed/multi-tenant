@@ -2,6 +2,7 @@
 
 namespace App\Tenant\Models;
 
-interface Tenant {
-
+interface Tenant
+{
+    
 }
